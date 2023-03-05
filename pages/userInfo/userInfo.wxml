@@ -1,0 +1,26 @@
+<view class="cw-container">
+  <view class="person-list">
+    <view class="list-item">
+      <view class="list-item-bd text-flex-center start">头像</view>
+      <view class="list-item-ft arrow">
+          <image src="../../assets/images/avatar.png" bindtap="editUserInfo" mode="aspectFit" class="list-avatar" style="width:136rpx;height:136rpx" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-bd">姓名</view>
+      <view class="list-item-ft">
+        <input bindinput="handleUsername"  value="{{userForm.username}}"  placeholder="请输入您的姓名" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-bd">联系电话</view>
+      <view class="list-item-ft">
+        <input  bindinput="handleMobile" value="{{userForm.mobile}}" type="number" placeholder="请输入您的电话" maxlength="11" placeholder-class="placeholder-color"/>
+      </view>
+    </view>
+  </view>      
+  <view class="foot-btn-wrap">
+    <button  bindtap="doSave">保存</button>
+  </view>
+  
+</view>

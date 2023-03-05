@@ -1,0 +1,49 @@
+<image mode="widthFix" src="../../assets/images/memberBg.png" class="dell-image navbar-bg member-bg"/>
+<!-- avatar -->
+<view class="member-info-wrap">
+  <view class="member-avatar-wrap">
+      <view class="member-avatar">
+          <image src="../../assets/images/avatar.png" bindtap="editUserInfo" mode="aspectFit" style="width:136rpx;height:136rpx" />
+      </view>
+  </view>
+  <view class="content">
+      <view class="nickname">用户名称用户名称</view>
+      <view class="department">
+          您的会员将于2021-08-19过期，届时请及时续费
+      </view>
+  </view>
+</view>
+<view class="member-info-container">
+  <!-- 会员月份 -->
+  <view class="member-price">
+    <view class="m-item" wx:for="{{memberInfo}}" wx:key="{{item.id}}" bindtap="choose" data-index="{{index}}" data-number="{{item.price}}" data-content="{{item.detail}}">
+      <view class="m-content" >
+        <view class="mc-hd">{{item.month}}</view>
+        <view class="mc-ft"><span>￥</span>{{item.price}}</view>
+      </view>
+      <image wx:if="{{active != index}}" src="{{mpic01}}"  mode="aspectFit" />
+      <image wx:else src="{{mpic02}}"  mode="aspectFit" />
+    </view>
+  </view>
+  <view class="blank20"></view>
+  <!-- 会员规则 -->
+  <view class="member-ruler-wrap">
+    <view class="member-ruler">
+      <view class="mr-header">
+        <image src="../../assets/images/dt-left.png"  mode="aspectFit" class="mr-hd-img"  />
+        <span>会员权益及规则</span>
+        <image src="../../assets/images/dt-right.png"  mode="aspectFit"  class="mr-hd-img"/>
+      </view>
+      <view class="mr-detail">
+        {{content}}
+      </view>
+    </view>
+  </view>
+</view>
+    
+<view class="foot-btn-wrap foot-member">
+  <view class="foot-btn member-btn"  bindtap="doSave">
+    开通/续费会员 <span><em>￥</em>{{price}}</span>
+  </view>
+</view>
+

@@ -1,0 +1,80 @@
+<view class="cw-container">
+  
+  <!-- 店铺名称 -->
+  <view class="piclist ">
+    <view class="pitem">
+      <view class="pic">
+        <image mode="aspectFill" class="aspect-pic-default" src="{{shopInfo.image}}"  />
+      </view>
+      <view class="content">
+        <view class="c-hd">{{shopInfo.name}}</view>
+        <view class="c-ft">
+          <span class="c-ft-label c9 text-flex-center start">产品数量：{{shopInfo.number}}</span>
+          <span class="c-ft-btn">
+            <button class="btn" data-cid="{{shopInfo.id}}" data-cname="{{shopInfo.name}}" bindtap="doStudy">
+              编辑
+            </button>
+          </span>
+        </view>
+      </view>
+    </view>
+    <NoData wx:if="{{otherCourse.length == 0}}"></NoData>
+  </view>
+  <!-- 产品名称 -->
+  <Tab tabList="{{tabList}}" bindtabsItemChange="tabsItemChange">
+    <block wx:if="{{tabList[0].isActive}}">
+      <!-- 未完成 -->
+      <view class="piclist product-container">
+        <view class="pitem-wrap" wx:for="{{otherCourse}}">
+          <view class="pitem">
+            <view class="pic">
+              <image mode="aspectFill" class="aspect-pic-default" src="{{item.image}}"  />
+            </view>
+            <view class="content">
+              <view class="c-hd">{{item.name}}</view>
+              <view class="c-ft">
+                <span class="c-ft-label price"><em>￥</em>{{item.pirce}}</span>
+              </view>
+            </view>
+          </view>
+          <view class="p-more">
+              <span class="btn plain" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+                下架
+              </span>
+              <span class="btn" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+                编辑
+              </span>
+          </view>
+        </view>
+        <NoData wx:if="{{otherCourse.length == 0}}"></NoData>
+      </view>
+      <!-- //未完成 -->
+    </block>
+    <block wx:else>
+      <!-- 未完成 -->
+      <view class="piclist product-container">
+        <view class="pitem" wx:for="{{passCourse}}" wx:key="{{id}}" data-cid="{{item.id}}" data-cname="{{item.name}}" bindtap="doStudy">
+          <view class="pic">
+            <image mode="widthFix" src="{{item.image}}" style="width:100%" />
+          </view>
+          <view class="content">
+            <view class="c-hd">{{item.name}}</view>
+            <view class="c-ft">
+              <span class="c-ft-label">{{item.price}}</span>
+              <span class="c-ft-btn">
+                <button wx:if="{{item.is_pass == 1}}" class="btn disabled">已通过</button>
+              </span>
+            </view>
+          </view>
+        </view>
+        <NoData wx:if="{{passCourse.length == 0}}"></NoData>
+      </view>
+    </block>
+  </Tab>
+  <!-- 添加 -->
+  <view class="foot-btn-wrap">
+    <button bindtap="doSave"> 
+      <image mode="aspectFill"  class="icon-plus" src="../../assets/images/icon-plus.png"/> 添加
+    </button>
+  </view>
+</view>

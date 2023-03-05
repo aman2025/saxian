@@ -1,0 +1,38 @@
+page{
+  height: calc(100% - 100rpx);
+  position: relative;
+  background: #FAFAFA;
+}
+/* 所有swiper图片 */
+.swiper-wrap {
+  padding: 0;
+  height: 600rpx;
+  position: relative;
+}
+.home-swiper{
+  height: 600rpx;
+}
+wx-swiper .wx-swiper-dot{
+  width: 10rpx;
+  height: 10rpx;
+  margin-left:-8rpx;
+  margin-right:-8rpx;
+  
+}
+wx-swiper .wx-swiper-dot-active{
+  width: 28rpx;
+  border-radius: 24rpx;
+}
+.swiper-gradient{
+  position: relative;
+  margin-top: -80px;
+  height: 99px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #F7F7F7 100%);
+}
+
+/*卡片背景*/
+.card-bg{
+  display: flex;
+  padding: 0 24rpx;
+}
+

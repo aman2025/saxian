@@ -1,0 +1,60 @@
+<!-- banner -->
+<view class="swiper-wrap">
+  <swiper class="home-swiper cg" indicator-dots="true" autoplay circular interval="2000" duration="500" indicator-color="rgba(206, 170, 106, 0.38)" indicator-active-color="#CCAB6B">
+    <block wx:for="{{banners}}" wx:key="*this">
+      <swiper-item>
+        <image data-url="{{item.url_scheme}}" catchtap="doBanner" mode="widthFix" src="{{item.image}}" class="dell-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- //banner -->
+<view class="cw-container">
+  <!-- products -->
+  <scroll-view  scroll-x="true" class="category-swiper">
+    <view class="cs-item" wx:for="{{products}}" wx:key="*this">
+      <image src="{{item.image}}" mode="heightFix" class="cs-img"/>
+    </view>
+  </scroll-view>
+  <!-- //products -->
+  <view class="blank20"></view>
+  <!-- 类别 -->
+  <view class="category">
+    <view class="c-item">
+      <image src="../../assets/images/p01.png" class="c-img"  mode="aspectFit"/>
+      <span>瓷器</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p02.png" class="c-img"  mode="aspectFit"/>
+      <span>书画</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p03.png" class="c-img"  mode="aspectFit"/>
+      <span>玉器</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p04.png" class="c-img"  mode="aspectFit"/>
+      <span>文房四宝</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p05.png" class="c-img"  mode="aspectFit"/>
+      <span>漆器</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p06.png" class="c-img"  mode="aspectFit"/>
+      <span>绣品</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p07.png" class="c-img"  mode="aspectFit"/>
+      <span>铜器</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p08.png" class="c-img"  mode="aspectFit"/>
+      <span>佛像</span>
+    </view>
+    <view class="c-item">
+      <image src="../../assets/images/p09.png" class="c-img"  mode="aspectFit"/>
+      <span>鎏金器</span>
+    </view>
+  </view>
+</view>

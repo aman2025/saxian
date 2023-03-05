@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加/编辑产品",
+  "usingComponents": {
+    "UploadImg": "../../components/UploadImg/uploadImg"
+  }
+}

@@ -1,0 +1,18 @@
+.column-line{
+  flex-direction: column;
+  padding-bottom: 0 !important;
+}
+.column-line::after{
+  background-color: #fff !important;
+}
+.cw-texta{
+  border-radius: 20rpx;
+  background-color: #F9F9F9;
+  padding: 20rpx;
+  text-align: left;
+  width: calc(100% - 10rpx);
+  margin-top: 20rpx;
+}
+.foot-editProduct{
+  position: static !important;
+}

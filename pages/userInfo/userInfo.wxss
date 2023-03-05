@@ -1,0 +1,6 @@
+.list-avatar{
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+  overflow: hidden;
+} 

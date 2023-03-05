@@ -1,0 +1,70 @@
+<image mode="widthFix" src="../../assets/images/myBg.png" class="dell-image navbar-bg my-bg" />
+<view class="my-info-wrap">
+    <view class="my-avatar-wrap">
+        <view class="my-avatar">
+            <image src="../../assets/images/avatar.png" bindtap="editUserInfo" mode="aspectFit" style="width:136rpx;height:136rpx" />
+        </view>
+    </view>
+    <view class="content">
+        <view class="nickname">用户名称</view>
+        <view class="department">
+            138******008
+        </view>
+    </view>
+</view>
+<view class="notice-wrap" wx:if="{{message.name}}">
+  <view class="notice" catchtap="toMessageDetail">
+    <view class="nt-hd">
+      <image  class="icon-notice" src="../../assets/images/icon-notice.png" />
+      <span>{{message.name}}</span>
+    </view>
+    <view class="nt-bd" data-id="{{message.id}}">{{message.remark}}</view>
+    <view class="nt-ft">{{message.create_at}}</view>
+  </view>
+</view>
+<view class="no-message"></view>
+<view class="list">
+    <navigator url="/pages/member/member" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon01.png" />
+        </view>
+        <view class="list-item-bd">会员中心</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/application/application" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon02.png" />
+        </view>
+        <view class="list-item-bd">申请入驻</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/product/product" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon03.png" />
+        </view>
+        <view class="list-item-bd">产品管理</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/certificate/certificate" class="list-item">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon04.png" />
+        </view>
+        <view class="list-item-bd">平台介绍</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator url="/pages/feedback/feedback" class="list-item" >
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon05.png" />
+        </view>
+        <view class="list-item-bd">联系客服</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+    <navigator class="list-item" bindtap="logout">
+        <view class="list-item-hd">
+            <image class="list-icon" src="../../assets/images/my-icon06.png" />
+        </view>
+        <view class="list-item-bd">退出登录</view>
+        <view class="list-item-ft"></view>
+    </navigator>
+</view>
+

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 顶部banner -->
+  <view class="swiper-wrap">
+    <swiper class="home-swiper" indicator-dots="true" autoplay circular interval="2000" duration="500" indicator-color="rgba(255, 255, 255, 0.5)" indicator-active-color="#fff">
+      <block wx:for="{{banners}}" wx:key="*this">
+        <swiper-item>
+          <image data-url="{{item.url}}" catchtap="doBanner" mode="widthFix" src="{{item.image}}" class="dell-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="swiper-gradient"></view>
+  </view>
+  <!-- 卡片背景 -->
+  <view class="card-bg">
+      <image data-url="assets/images/card_back.png"  mode="widthFix" />
+  </view>
+  
+</view>

@@ -1,0 +1,129 @@
+page{
+  height: calc(100% - 220rpx);
+}
+.member-info-wrap{
+  display: flex;
+  padding: 24rpx 30rpx 0;
+  flex-direction: column;
+  height: 320rpx;
+}
+.member-info-wrap .member-avatar{
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+  overflow: hidden;
+} 
+.member-info-wrap .member-avatar-wrap{
+  display: flex;
+  justify-content: center;
+} 
+.member-info-wrap .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+.member-info-wrap .content .nickname{
+  padding: 16rpx 0;
+  font-size: 40rpx;
+} 
+.member-info-wrap .content .department{
+  padding: 5rpx 0;
+  font-size: 26rpx;
+  color: #522A13;
+}
+.member-bg{
+  top: -100rpx;
+}
+.member-info-container{
+  height: calc(100% - 320rpx);
+  padding: 40rpx 30rpx;
+  background: linear-gradient(91deg, #454545 0%, #151515 100%);
+  border-radius: 20px 20px 0px 0px;
+}
+.member-price{
+  height: 216rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.member-price .m-item{
+  flex: 0 0 25%;
+  width: 160rpx;
+  height: 216rpx;
+  position: relative;
+}
+.member-price .m-item image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 160rpx;
+  height: 216rpx;
+  z-index: 0;
+}
+.member-price .m-item .m-content{
+  position: relative;
+  width: 160rpx;
+  height: 216rpx;
+  z-index: 2;
+}
+.member-price .m-item .m-content .mc-hd{
+  font-size: 26rpx;
+  color: #666;
+  text-align: center;
+  padding: 36rpx 0 46rpx;
+}
+.member-price .m-item .m-content .mc-ft{
+  font-size: 40rpx;
+  color: #CA9557;
+  text-align: center;
+}
+.member-price .m-item.active .mc-ft.special{
+  color: #6E4016;
+}
+.member-price .m-item .m-content .mc-ft span{
+  font-size: 34rpx;
+}
+.member-ruler-wrap{
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 24rpx;
+  height: calc(100% - 420rpx);
+}
+/* 规则 */
+.member-ruler{
+  height: 100%;
+}
+.member-ruler .mr-header{
+  font-size: 30rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.member-ruler .mr-header span{
+  padding: 0 10rpx;
+}
+.member-ruler .mr-header .mr-hd-img{
+  width: 52rpx;
+  height: 14rpx;
+}
+.member-ruler .mr-detail{
+  height: calc(100% - 60rpx);
+  overflow: auto;
+  padding: 10rpx;
+}
+.member-btn{
+  display: flex;
+}
+.member-btn span{
+  font-size: 46rpx !important;
+  margin-left: 10rpx;
+}
+.member-btn span em{
+  font-size: 26rpx !important;
+}
+.foot-member{
+  background-color: transparent !important;
+}

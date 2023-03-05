@@ -1,0 +1,35 @@
+page{
+  background-color: #F7F5F7;
+}
+
+.piclist .pitem-wrap{
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.piclist .pitem-wrap .pitem{
+  background-color: none;
+  margin-bottom: 0;
+}
+.piclist .p-more{
+  display: flex;
+  padding: 0 24px 24rpx 0;
+  justify-content: flex-end;
+}
+.piclist .p-more span.btn{
+  margin-left: 10px;
+}
+
+.price{
+  font-size: 36rpx;
+  padding-top: 20rpx;
+  font-weight: bold;
+}
+.price > em{
+  font-size: 24rpx;
+}
+.icon-plus{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}

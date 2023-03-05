@@ -1,0 +1,71 @@
+<view class="cw-container">
+  <view class="person-list">
+    <view class="list-item">
+      <view class="list-item-bd">*产品名称</view>
+      <view class="list-item-ft">
+        <input bindinput="handleUsername"  value="{{productForm.username}}"  placeholder="请输入产品名称" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+    <picker mode="selector" bindchange="bindPickerChange" value="{{categoryIndex}}" range="{{categories}}">
+      <view class="list-item">
+        <view class="list-item-bd">*产品品类 {{productForm.type}}</view>
+        <view class="list-item-ft arrow">
+          <view>{{categoryValue}}</view>
+        </view>
+      </view>
+    </picker>
+    <view class="list-item">
+      <view class="list-item-bd">* 产品价格</view>
+      <view class="list-item-ft">
+        <input  bindinput="handlePrice" value="{{productForm.price}}" type="number" placeholder="请输入产品价格" placeholder-class="placeholder-color"/>
+      </view>
+    </view>
+    <view class="list-item column-line">
+      <view class="list-item-bd">*上传商品图片（首图将作为缩略图） {{productForm.img}}</view>
+      <view class="list-item-ft">
+        <!-- 图片上传 -->
+        <view class="feedback-form-item">
+          <view class="df-bd">
+            <view class="upload-img-wrap">
+              <image src="../../assets/images/uploadBg.png" class="upload-bg" bindtap="chooseImg" wx:if="{{chooseImgs.length !== 9}}"/>
+              <!-- uploadImg -->
+              <view wx:for="{{chooseImgs}}" wx:key="*this" class="upload-img-item" >
+                <span class="upload-img-close" bindtap="removeImg" data-index="{{index}}"></span>
+                <UploadImg src="{{item}}"></UploadImg>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="list-item column-line">
+      <view class="list-item-bd">*产品描述</view>
+      <view class="list-item-ft">
+        <textarea class="cw-texta"  bindinput="handleRemark" value="{{productForm.remark}}" placeholder="请输入产品描述内容"  placeholder-class="placeholder-color">
+        </textarea> 
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-bd">*产品所在地</view>
+      <view class="list-item-ft">
+        <input bindinput="handlePlace"  value="{{productForm.place}}"  placeholder="请输入产品所在地" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-bd">联系电话</view>
+      <view class="list-item-ft">
+        <input  bindinput="handleMobile" value="{{productForm.mobile}}" type="number" placeholder="请输入您的电话" maxlength="11" placeholder-class="placeholder-color"/>
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-bd">*联系微信</view>
+      <view class="list-item-ft">
+        <input bindinput="handleWechat"  value="{{productForm.wechat}}"  placeholder="请输入联系微信" placeholder-class="placeholder-color" />
+      </view>
+    </view>
+  </view>      
+  <view class="foot-btn-wrap foot-editProduct">
+    <button class="foot-btn" bindtap="doSave">保存</button>
+  </view>
+  
+</view>

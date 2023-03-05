@@ -1,0 +1,43 @@
+<!--application.wxml-->
+<view class="container">
+  <view class="person-list">
+    <view class="list-item">
+      <view class="list-item-bd">* 店铺名称 </view>
+      <view class="list-item-ft">
+        <input placeholder="请输入厂家名称"/>
+      </view>
+    </view>
+    <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{business}}">
+      <view class="list-item">
+        <view class="list-item-bd">* 经营类目</view>
+        <view class="list-item-ft arrow">
+          <view>{{businessValue}}</view>
+        </view>
+      </view>
+    </picker>
+    <view class="list-item">
+      <view class="list-item-bd">* 需缴押金 </view>
+      <view class="list-item-ft">
+        <input placeholder="0"/>
+      </view>
+    </view>
+  </view>      
+  <!-- 图片上传 -->
+  <view class="feedback-form-item">
+    <view class="df-hd">图片上传</view>
+    <view class="df-bd">
+      <view class="upload-img-wrap">
+        <image src="../../assets/images/uploadBg.png" class="upload-bg" bindtap="chooseImg" wx:if="{{chooseImgs.length == 0}}"/>
+        <!-- uploadImg -->
+        <view wx:for="{{chooseImgs}}" wx:key="*this" class="upload-img-item" >
+          <span class="upload-img-close" bindtap="removeImg" data-index="{{index}}"></span>
+          <UploadImg src="{{item}}"></UploadImg>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="foot-btn-wrap">
+    <button>立即申请</button>
+  </view>
+  
+</view>

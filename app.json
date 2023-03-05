@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/userInfo/userInfo",
+    "pages/product/product",
+    "pages/category/category",
+    "pages/member/member",
+    "pages/editProduct/editProduct",
+    "pages/application/application"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#E55900",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "iconPath": "assets/images/icon-home.png",
+            "selectedIconPath": "assets/images/icon-home-active.png",
+            "text": "探索"
+        },
+        {
+            "pagePath": "pages/category/category",
+            "iconPath": "assets/images/icon-map.png",
+            "selectedIconPath": "assets/images/icon-map.png",
+            "text": "美食地图"
+        },
+        {
+            "pagePath": "pages/my/my",
+            "iconPath": "assets/images/icon-user.png",
+            "selectedIconPath": "assets/images/icon-user-active.png",
+            "text": "我的"
+        }
+    ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
