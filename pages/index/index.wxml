@@ -15,5 +15,6 @@
   <view class="card-bg">
       <image data-url="assets/images/card_back.png"  mode="widthFix" />
   </view>
+  <!-- test -->
   
 </view>
